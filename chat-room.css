@@ -1,0 +1,100 @@
+/* CSS declarations go here */
+body {
+	font-family: sans-serif;
+	background-color: #315481;
+	background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+	background-attachment: fixed;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+}
+li {
+	list-style: none;
+}
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	min-height: 100%;
+	background: white;
+}
+header {
+	background: #d2edf4;
+	background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
+	padding: 20px 15px 15px 15px;
+	position: relative;
+}
+.msg-input {
+	display: block;
+	width: 300px;
+	line-height: 28px;
+	height: 28px;
+}
+.msg-li {
+	float: left;
+	width: 90%;
+	min-height: 50px;
+	margin: 5px;
+}
+.l {
+	float: left;
+}
+.r {
+	float: right;
+}
+.msg-username {
+	padding: 5px;
+	border-radius: 22px;
+	border: 2px solid #FFF;
+	box-shadow: 2px 2px 3px #999;
+	background: #8FA5C2;
+}
+.msg-msg {
+	background: none;
+	margin: 0 15px;
+	position: relative;
+}
+.msg-msg pre {
+	max-width: 500px;
+	margin: 0;
+	background: #DEEDFF;
+	box-shadow: 2px 2px 3px #999;
+	color: #1F2427;
+	padding: 8px;
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+	font-size: 16px;
+	font-family: '微软雅黑';
+}
+.arrow {
+	border: 6px solid #DEEDFF;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 8px;
+}
+.arrow-l {
+	border-color: transparent #DEEDFF transparent transparent;
+	border-style: dashed solid dashed dashed;
+	left: -12px;
+}
+.arrow-r {
+	right: -12px;
+	border-color: transparent transparent transparent #DEEDFF;
+	border-style: dashed dashed dashed solid;
+}
+.msg-small {
+	background: none;
+	color: #6E49D8;
+	text-shadow: none;
+	font-size: 12px;
+	margin-top: 5px;
+}
+.clear {
+	clear: both;
+}
