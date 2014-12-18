@@ -1,0 +1,63 @@
+<head>
+<title>chat-room</title>
+</head>
+
+<body>
+<div class="container">
+	<header>
+	<!--登录控件-->
+	{{> loginButtons}}
+
+            <!--没有登录不能发消息-->
+             {{#if currentUser}}
+             {{>send}}
+              {{/if}}
+
+	</header>
+
+            <!--没有登录不能查看消息-->
+            {{#if currentUser}}
+
+	<ul>
+	{{#each chat}}
+             {{> msg}}
+             {{/each}}
+	</ul>
+
+	<div class="clear"></div>
+              {{/if}}
+</div>
+</body>
+
+<template name="send">
+	<p></p>
+	<input type="text" class="msg-input" placeholder="输入消息" />
+	<p></p>
+</template>
+
+<template name="msg">
+	<li class="msg-li">
+		{{#if   isCurrentUser  }}
+		<div class="msg-username r">{{username}}</div>
+		<div class="msg-msg r">
+			<pre>{{msg}}</pre> <i class="arrow  arrow-r"></i>
+		</div>
+		<small  class="msg-small r">{{time}}</small>
+		{{else}}
+		
+
+		<div class="msg-username l">{{username}}</div>
+		<div class="msg-msg l">
+			<pre>{{msg}}</pre> <i class="arrow  arrow-l"></i>
+		</div>
+		<small  class="msg-small l">{{time}}</small>
+		{{/if}}
+	</li>
+</template>
+
+<!--<li>
+<span class="text"> <strong>{{username}}</strong>
+	- {{msg}}-{{time}}
+</span>
+</li>
+-->
